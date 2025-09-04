@@ -1,0 +1,261 @@
+@use "../style/helper/breakpoints" as vars;
+
+@media screen and (min-width: vars.$breakpoint-desktop) {
+}
+
+.modal-overlay-tours {
+  background-color: rgba(46, 47, 66, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+.overlay-tours {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 90vw;
+  height: 90vw;
+  max-width: 615px;
+  max-height: 625px;
+
+  @media screen and (min-width: vars.$breakpoint-tablet) {
+    max-height: 735px;
+    max-width: 900px;
+  }
+
+  @media screen and (min-width: vars.$breakpoint-desktop) {
+    max-height: 975px;
+    max-width: 1300px;
+  }
+}
+.modal-tours-content {
+  position: relative;
+  overflow: hidden;
+}
+.tours-close-btn {
+  position: absolute;
+  z-index: 5;
+  top: 12px;
+  right: 12px;
+  fill: var(--white-color);
+  border: none;
+  background: none;
+
+  @media screen and (min-width: vars.$breakpoint-tablet) {
+    width: 40px;
+    height: 40px;
+    top: 20px;
+    right: 20px;
+  }
+}
+
+.tours-modal-close-icon {
+  @media screen and (min-width: vars.$breakpoint-tablet) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.tour-block {
+  position: relative;
+  height: 480px;
+  flex-shrink: 0;
+  width: 100%;
+
+  @media screen and (min-width: vars.$breakpoint-tablet) {
+    height: 550px;
+  }
+
+  @media screen and (min-width: vars.$breakpoint-desktop) {
+    height: 742px;
+  }
+}
+
+.tour-content {
+  color: var(--white-color);
+  padding: 56px 48px;
+
+  @media screen and (min-width: vars.$breakpoint-tablet) {
+    padding: 60px;
+  }
+
+  @media screen and (min-width: vars.$breakpoint-desktop) {
+    padding: 108px 100px;
+  }
+}
+
+.modalSwiper {
+  position: relative;
+}
+.modalSwiperWraper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.swiperPagination {
+  position: absolute;
+  bottom: 43px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  margin: 0 8px;
+  background-color: var(--grey-color);
+  border-radius: 50%;
+  opacity: 1;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  @media screen and (min-width: vars.$breakpoint-tablet) {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--white-color);
+}
+
+.bg-picture {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.tour-title {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 12px;
+
+  @media screen and (min-width: vars.$breakpoint-tablet) {
+    font-size: 24px;
+  }
+
+  @media screen and (min-width: vars.$breakpoint-desktop) {
+    font-size: 40px;
+  }
+}
+
+.numDay {
+  display: block;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: var(--blue-color);
+  height: 48px;
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+
+  @media screen and (min-width: vars.$breakpoint-tablet) {
+    margin-bottom: 16px;
+    max-width: 550px;
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: vars.$breakpoint-desktop) {
+    font-size: 28px;
+  }
+}
+.tours-modal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @media screen and (min-width: vars.$breakpoint-tablet) {
+    gap: 16px;
+  }
+}
+
+.modal-tours-name {
+  @media screen and (min-width: vars.$breakpoint-tablet) {
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: vars.$breakpoint-desktop) {
+    font-size: 28px;
+  }
+}
+.price-block {
+  padding: 28px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: var(--white-color);
+
+  @media screen and (min-width: vars.$breakpoint-tablet) {
+    padding: 40px 15px;
+    gap: 24px;
+  }
+
+  @media screen and (min-width: vars.$breakpoint-desktop) {
+    padding: 48px 15px;
+    gap: 28px;
+  }
+}
+
+.price-tour-modal {
+  font-weight: 600;
+  text-align: center;
+
+  @media screen and (min-width: vars.$breakpoint-tablet) {
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: vars.$breakpoint-desktop) {
+    font-size: 24px;
+  }
+}
+
+.buy-tour {
+  border: none;
+  outline: none;
+  width: 258px;
+  padding: 16px 70px;
+  background: var(--blue-color);
+  color: var(--white-color);
+  margin-inline: auto;
+  font-weight: 500;
+
+  @media screen and (min-width: vars.$breakpoint-tablet) {
+    width: 400px;
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: vars.$breakpoint-desktop) {
+    width: 575px;
+    font-size: 24px;
+  }
+
+  &:hover {
+    background-color: var(--hover-btn);
+  }
+}
