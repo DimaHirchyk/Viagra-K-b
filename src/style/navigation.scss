@@ -1,0 +1,123 @@
+@use "../style/helper/breakpoints" as vars;
+
+
+.navigation-section {
+  background-color: var(--red-color-bg);
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  height: 52px;
+  @media screen and (min-width: vars.$breakpoint-desktop) {
+    height: 44px;
+    justify-content: center;
+  }
+}
+
+.accordion {
+  @media screen and (min-width: vars.$breakpoint-desktop) {
+    display: none;
+  }
+}
+
+.accordion-btn {
+  color: white;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: var(--white-color);
+  padding: 10px;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  @media screen and (min-width: vars.$breakpoint-desktop) {
+    display: none;
+  }
+}
+
+.accordion-item input {
+  display: none; /* ховаємо чекбокс */
+}
+
+.accordion-item {
+  position: relative;
+  width: 100%; /* для позиціонування content відносно item */
+}
+
+.accordion-item .content {
+  margin-left: -15px;
+  position: absolute;
+  top: calc(100% + 13px);
+  left: 0; /* починається від лівого краю контейнера */
+  width: 100vw; /* займає всю ширину контейнера */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  background-color: var(--red-color-bg);
+  z-index: 10;
+}
+.content {
+}
+
+.accordion-item input:checked + .accordion-btn + .content {
+  max-height: 1000px;
+}
+
+.accordion-nav-list {
+  background-color: var(--pink-color);
+  padding: 0.5rem 0;
+}
+.accordion-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 30px;
+  color: #fff;
+  margin: 0 0.22rem;
+  padding: 0.25rem 0.75rem !important;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 250ms;
+
+  &:hover {
+    background-color: var(--navigation-hover);
+  }
+}
+
+.accordion-nav-item-link {
+  font-weight: 700;
+}
+.nav-list {
+  display: none;
+
+  @media screen and (min-width: vars.$breakpoint-desktop) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.nav-item {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  margin: 0 0.22rem;
+  padding: 0.25rem 0.75rem !important;
+  color: var(--white-color);
+  cursor: pointer;
+  transition: background-color 250ms;
+
+  &:hover {
+    background-color: var(--navigation-hover);
+  }
+}
+.nav-item-link {
+  text-transform: uppercase;
+  font-style: inherit;
+  flex-wrap: nowrap;
+  font-weight: 700;
+}

@@ -1,0 +1,53 @@
+@use "../style/helper/breakpoints" as vars;
+
+.footer {
+  background-color: var(--footer-bg);
+}
+.footer-container {
+  padding: 2.5rem;
+
+  @media screen and (min-width: vars.$breakpoint-tablet-main) {
+    display: grid;
+    grid-template-columns: 1fr 190px;
+    grid-template-rows: auto;
+
+    justify-content: space-between;
+    column-gap: 47px;
+    align-items: center;
+  }
+}
+.footer-list-partner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.938rem;
+}
+
+.footer-list-link {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  font-size: 14px;
+  color: var(--white-color);
+  text-align: center;
+
+  @media screen and (min-width: vars.$breakpoint-tablet-main) {
+    text-align: start;
+    font-size: 16px;
+  }
+}
+
+.dnk-fwidgettitle {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.footer-descriptions {
+  margin-top: 1.25rem;
+  font-weight: 400;
+  font-size: 0.75rem;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: var(--footer-desc);
+}

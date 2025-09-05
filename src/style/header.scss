@@ -1,97 +1,113 @@
 @use "../style/helper/breakpoints" as vars;
 
-.header {
-  position: absolute;
-  top: 32px;
-  left: 0;
-  width: 100%;
-  background-color: transparent;
-
-  padding: 0 32px;
-
-  @media screen and (min-width: vars.$breakpoint-tablet) {
-    padding: 0 20px;
-  }
-
-  @media screen and (min-width: vars.$breakpoint-desktop) {
-    top: 40px;
-  }
-}
-
 .header-container {
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo {
-  width: 40px;
-  height: 40px;
-
-  @media screen and (min-width: vars.$breakpoint-tablet) {
-    width: 60px;
-    height: 60px;
-  }
-}
-
-.icons-for-modal {
-  @media screen and (min-width: vars.$breakpoint-desktop) {
-    display: none;
-  }
-}
-.burger-btn {
-  width: 40px;
-  height: 40px;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  border: none;
-}
-
-.burger-close-btn {
-  width: 40px;
-  height: 40px;
-  background-color: transparent;
-  display: none;
-  align-items: center;
-  border: none;
-}
-
-.navigation {
-  display: none;
-
-  @media screen and (min-width: vars.$breakpoint-tablet) {
-  }
-
-  @media screen and (min-width: vars.$breakpoint-desktop) {
+  max-height: 160px;
+  @media screen and (min-width: vars.$breakpoint-tablet-main) {
     display: flex;
+    justify-content: space-between;
   }
 }
-.header-list {
+.header {
+  background-image: url(../public/header/background.webp);
+  background-position: center right;
+  background-size: auto;
+  background-repeat: no-repeat;
+
+  @media screen and (min-width: vars.$breakpoint-tablet-main) {
+    background-position: center center;
+  }
+}
+
+.header-name-block {
+  padding-block: 10px;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-secure {
+  display: inline-block;
+  margin-inline: auto;
+}
+
+.header-logo-block {
+  display: flex;
+  gap: 15px;
   align-items: center;
   justify-content: center;
-  gap: 80px;
+  @media screen and (min-width: vars.$breakpoint-tablet) {
+    justify-content: start;
+  }
 }
 
-.header-link {
-  position: relative;
-  color: var(--white-color);
-  font-weight: 500;
-  font-size: 24px;
-  white-space: nowrap;
-  &:after {
-    position: absolute;
-    content: "";
-    height: 2px;
-    width: 0;
-    background-color: var(--white-color);
-    bottom: -4px;
-    left: 0;
-    transition: width 0.3s ease;
+.header-logo {
+  width: 65px;
+  height: 65px;
+  display: none;
+
+  @media screen and (min-width: vars.$breakpoint-tablet) {
+    display: block;
   }
-  &:hover::after {
-    width: 100%;
+}
+.header-title-block {
+  margin-top: 20px;
+}
+.header-title {
+  text-align: center;
+
+  @media screen and (min-width: 501px) {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.125;
   }
+
+  @media screen and (min-width: vars.$breakpoint-tablet-main) {
+    text-align: start;
+  }
+}
+.header-description {
+  display: none;
+
+  @media screen and (min-width: 501px) {
+    display: block;
+    font-size: 0.86rem;
+    font-weight: 500;
+    text-align: left;
+    margin-top: 5px;
+  }
+}
+
+.header-address-wrapper {
+  display: none;
+  @media screen and (min-width: vars.$breakpoint-tablet-main) {
+    display: flex;
+    align-items: center; /* вирівнює по вертикалі */
+    justify-content: center;
+  }
+}
+.header-address {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+}
+.header-address-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  font-style: normal;
+}
+.header-address-name {
+  color: var(--help-red-color);
+  font-weight: 700;
+}
+.header-address-phone {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  color: var(--help-blue-color);
+  font-weight: 700;
+}
+.header-address-phone-icon {
+  fill: var(--help-blue-color);
 }

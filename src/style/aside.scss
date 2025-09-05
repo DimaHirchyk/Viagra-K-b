@@ -1,0 +1,174 @@
+@use "../style/helper/breakpoints" as vars;
+
+.aside-colum {
+  flex: none;
+
+  @media (min-width: vars.$breakpoint-tablet-main) {
+    width: 25%;
+  }
+}
+.aside-widget {
+  margin-bottom: 25px;
+}
+.aside-name-block {
+  background-color: var(--red-color-bg);
+  padding: 0.8rem;
+
+  @media (min-width: vars.$breakpoint-tablet-main) {
+    padding: 1.2rem;
+  }
+}
+.aside-title-name {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--white-color);
+
+  @media screen and (min-width: vars.$breakpoint-tablet) {
+    font-weight: 700;
+    font-size: 24px;
+  }
+}
+.aside-nav-colum {
+  background-color: var(--white-color);
+  padding: 0.7rem 1rem;
+
+  @media (min-width: vars.$breakpoint-tablet-main) {
+    padding: 1rem 1.3rem;
+  }
+}
+.aside-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.aside-navitem {
+  transition: transform 500ms ease;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--red-color-bg);
+    transform: translateX(15px);
+  }
+}
+.aside-name-item {
+  font-size: 0.9rem;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  font-weight: 600;
+
+  @media (min-width: vars.$breakpoint-tablet-main) {
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: vars.$breakpoint-tablet) {
+    font-weight: 700;
+    font-size: 24px;
+  }
+}
+
+.ipill {
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: left;
+  padding-left: 25px;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+
+  @media (min-width: vars.$breakpoint-tablet-main) {
+    padding-left: 32px;
+    background-size: 30px;
+  }
+}
+.vgr {
+  background-image: url(../public/pille/viagra-brand.webp);
+  color: var(--red-color-bg);
+}
+
+.tad {
+  background-image: url(../public/pille/tadalafil.webp);
+}
+
+.var {
+  background-image: url(../public/pille/vardenafil.webp);
+}
+
+.kam {
+  background-image: url(../public/pille/kamagra.webp);
+}
+
+.kamoj {
+  background-image: url(../public/pille/kamagra-oral-jelly.webp);
+}
+
+.femvgr {
+  background-image: url(../public/pille/female-viagra.webp);
+}
+
+.cbra {
+  background-image: url(../public/pille/cialis-brand.webp);
+}
+
+.lbra {
+  background-image: url(../public/pille/levitra-brand.webp);
+}
+
+.vgrb {
+  background-image: url(../public/pille/viagra-brand.webp);
+}
+
+.tab {
+  background-image: url(../public/pille/tadalafil.webp);
+}
+
+.cpro {
+  background-image: url(../public/pille/cialis-professional.webp);
+}
+
+.cda {
+  background-image: url(../public/pille/cialis-daily.webp);
+}
+
+.cts {
+  background-image: url(../public/pille/cialis-soft-tabs.webp);
+}
+
+.csa {
+  background-image: url(../public/pille/cialis-super-active.webp);
+}
+.kam {
+  background-image: url(../public/pille/kamagra.webp);
+}
+.kamoj {
+  background-image: url(../public/pille/kamagra-oral-jelly.webp);
+}
+.var {
+  background-image: url(../public/pille/vardenafil.webp);
+}
+.dap {
+  background-image: url(../public/pille/dapoxetine.webp);
+}
+.prop {
+  background-image: url(../public/pille/propecia.webp);
+}
+.vgr {
+  background-image: url(../public/pille/viagra-generic.webp);
+}
+.vgrst {
+  background-image: url(../public/pille/viagra-soft-tabs.webp);
+}
+.vgrsa {
+  background-image: url(../public/pille/viagra-super-active.webp);
+}
+.femvgr {
+  background-image: url(../public/pille/female-viagra.webp);
+}
+
+.sil {
+  background-image: url(../public/pille/sildenafil.webp);
+}
+
+.ava {
+  background-image: url(../public/pille/avanafil.webp);
+}

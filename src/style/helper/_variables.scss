@@ -1,27 +1,37 @@
 @use "./breakpoints" as vars;
 
 :root {
-  --blue-color: #5b86a1;
-  --hover-btn: rgba(27, 29, 27, 1);
-  --core-color: rgba(27, 29, 27, 1);
-  --bg-color: rgba(32, 35, 33, 1);
-  --white-color: rgba(247, 251, 251, 1);
-  --grey-color: rgba(163, 165, 163, 1);
-  --font-family-base: "Montserrat", sans-serif;
+  --footer-desc: #8db7c9;
+  --footer-bg: #325269;
+  --black: #343a40;
+  --green: #149024;
+  --yellow: #ff9800;
+  --light-green: #d7ecd9;
+  --light-yellow: #fff8ea;
+  --light-gray: #dbdbdb;
+  --bg: #e4f0f5;
+  --column-text: #141b30;
+  --colum-color: #fef6e5;
+  --active-color: #3273dc;
+  --pink-color: #d53d5b;
+  --navigation-hover: #ecacb8;
+  --white-color: #fff;
+  --red-color-bg: #c60c30;
+  --help-red-color: #ff0537;
+  --core-color: #325269;
+  --blue-color: #2196f3;
+  --font-family-base: "Roboto", sans-serif;
 }
 
 .container {
-  max-width: 375px;
-  padding: 0 32px;
+  min-width: 375px;
+  padding-inline: 15px;
   margin: 0 auto;
 
   @media screen and (min-width: vars.$breakpoint-tablet) {
-    max-width: 768px;
-    padding: 0 20px;
   }
 
   @media screen and (min-width: vars.$breakpoint-desktop) {
-    max-width: 1440px;
-    padding: 0 135px;
+    max-width: 1344px;
   }
 }
