@@ -10,7 +10,9 @@
     display: grid;
     grid-template-columns: 1fr 190px;
     grid-template-rows: auto;
-
+    grid-template-areas:
+      "imgs links"
+      "copy links";
     justify-content: space-between;
     column-gap: 47px;
     align-items: center;
@@ -21,6 +23,16 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.938rem;
+
+  @media screen and (min-width: vars.$breakpoint-tablet-main) {
+    width: 100%;
+    grid-area: imgs;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    min-width: 83px;
+    text-align: center;
+  }
 }
 
 .footer-list-link {
@@ -34,7 +46,13 @@
 
   @media screen and (min-width: vars.$breakpoint-tablet-main) {
     text-align: start;
+    gap: 1rem;
     font-size: 16px;
+  }
+
+  @media screen and (min-width: vars.$breakpoint-desktop) {
+    gap: 1.2rem;
+    font-size: 18px;
   }
 }
 

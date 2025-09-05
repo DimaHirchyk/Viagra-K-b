@@ -1,6 +1,5 @@
 @use "../style/helper/breakpoints" as vars;
 
-
 .navigation-section {
   background-color: var(--red-color-bg);
 }
@@ -58,8 +57,6 @@
   transition: max-height 0.5s ease;
   background-color: var(--red-color-bg);
   z-index: 10;
-}
-.content {
 }
 
 .accordion-item input:checked + .accordion-btn + .content {
